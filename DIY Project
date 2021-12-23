@@ -1,0 +1,77 @@
+# Python code to calculate gst and net amount
+# Name of product for which it has to be calculated
+name_of_product = str(input('Enter the name of product:'))
+original_price = float(input('Original price:'))
+# Enter the tax slab - Interstate or Intrastate
+tax_slab = str(input('Tax Slab:'))
+# When product is automobile
+if name_of_product == 'automobile':
+    gst_amount = (28*original_price)/100
+    if tax_slab == 'Intrastate':
+        cgst_amount = gst_amount/2
+        sgst_amount = gst_amount/2
+        print('CGST Amount:', cgst_amount )
+        print('SGST Amount:', sgst_amount)
+        net_price = cgst_amount + sgst_amount + original_price
+
+    elif tax_slab == 'Interstate':
+        print('GST Amount:', gst_amount)
+        net_price = gst_amount + original_price
+    # printing the net price
+    print('Net Price:', net_price)
+# When product is clothes
+elif name_of_product == 'clothes':
+    gst_amount = (5*original_price)/100
+    if tax_slab == 'Intrastate':
+        cgst_amount = gst_amount / 2
+        sgst_amount = gst_amount / 2
+        print('CGST Amount:', cgst_amount)
+        print('SGST Amount:', sgst_amount)
+        net_price = cgst_amount + sgst_amount + original_price
+
+    elif tax_slab == 'Interstate':
+        print('GST Amount:', gst_amount)
+        net_price = gst_amount + original_price
+    # printing the net price
+    print('Net Price:', net_price)
+# When product is sports goods
+elif name_of_product == 'sports_goods':
+    gst_amount = (18*original_price)/100
+    if tax_slab == 'Intrastate':
+        cgst_amount = gst_amount / 2
+        sgst_amount = gst_amount/ 2
+        print('CGST Amount:', cgst_amount)
+        print('SGST Amount:', sgst_amount)
+        net_price = cgst_amount + sgst_amount + original_price
+    elif tax_slab == 'Interstate':
+        print('GST Amount', gst_amount)
+        net_price = gst_amount + original_price
+    print('Net Price', net_price)
+# When product is board games
+elif name_of_product == 'board_games':
+    gst_amount = (12*original_price)/100
+    if tax_slab == 'Intrastate':
+        cgst_amount = gst_amount / 2
+        sgst_amount = gst_amount/ 2
+        print('CGST Amount:', cgst_amount)
+        print('SGST Amount:', sgst_amount)
+        net_price = cgst_amount + sgst_amount + original_price
+    elif tax_slab == 'Interstate':
+        print('GST Amount', gst_amount)
+        net_price = gst_amount + original_price
+    print('Net Price', net_price)
+# When product is cereal grains
+elif name_of_product == 'cereal_grains':
+    gst_amount = (5*original_price)/100
+    if tax_slab == 'Intrastate':
+        cgst_amount = gst_amount / 2
+        sgst_amount = gst_amount/ 2
+        print('CGST Amount:', cgst_amount)
+        print('SGST Amount:', sgst_amount)
+        net_price = cgst_amount + sgst_amount + original_price
+    elif tax_slab == 'Interstate':
+        print('GST Amount', gst_amount)
+        net_price = gst_amount + original_price
+    print('Net Price', net_price)
+else:
+    print("Data not found on server")
